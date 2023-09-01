@@ -1,0 +1,283 @@
+/* Root */
+:root{
+    /* Width/height */
+    --header-height: auto;
+    --max-width: 1200px;
+    --page-content: calc(100% - var(--card-margin) * 2);
+    --card-width: 30%;
+    --card-margin: 1.665%;
+
+    /* Font */
+    --font-family: Arial, Helvetica, sans-serif;
+
+    /* Colors */
+    --primary: #e3efcb;
+    --secondary: #414392;
+    --dark: #252525;
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    /* Övrigt */
+    --header-flex: row;
+    --header-flex-reverse: row;
+}
+@media (max-width: 768px) {
+    :root {
+        --page-content: calc(100% - var(--card-margin) * 2);
+        --card-width: 46%;
+        --card-margin: 2%;
+    }
+  }
+@media (max-width: 576px) {
+    :root {
+        --page-content: calc(100% - var(--card-margin) * 2);
+        --card-width: 96%;
+        --card-margin: 2%;
+
+        /* Övrigt */
+        --header-flex: column;
+        --header-flex-reverse: column-reverse;
+    }
+  }
+
+/* Global */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#page-content{
+    width: var(--page-content);
+    margin: var(--card-margin)
+}
+
+#content{
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.margin-auto{
+    margin: auto;
+}
+
+/* Icons */
+.fa-user, #bookmark-icon{
+    color: var(--secondary);
+}
+.fa-bookmark{
+    color: var(--primary);
+}
+
+/* Display */
+.display-none{
+    display: none;
+}
+
+.display-block{
+    display: block;
+}
+
+/* Flex */
+.flex{
+    display: flex;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.header-flex{
+    display: flex;
+    flex-direction: var(--header-flex);
+}
+.header-flex-reverse{
+    display: flex;
+    flex-direction: var(--header-flex-reverse);
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.flex-justify-center{
+    justify-content: center;
+}
+
+.flex-justify-start{
+    justify-content: flex-start;
+}
+
+.flex-justify-end{
+    justify-content: flex-end;
+}
+
+.flex-justify-space-between{
+    justify-content: space-between;
+}
+
+.flex-align-center{
+    align-items: center;
+}
+
+/* Header */
+
+header{
+    height: var(--header-height);
+    background-color: var(--primary);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+#header-logo{
+    height: 100%;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+#header-logo > img{
+    max-height: 40px;
+}
+
+.header-icons > div {
+    margin-left: 12px;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+/* Menu */
+#login-menu, #profile-menu {
+    padding: 24px;
+    background-color: var(--primary);
+    position: absolute;
+    right: 0;
+}
+
+.account-btn{
+    margin-bottom: 8px;
+    width: 120px;
+}
+
+.btn{
+    padding: 8px;
+    cursor: pointer;
+}
+
+/* Använd denna om aktiv (glöm inte styla) */
+.btn-active{
+    background-color: darkgreen;
+}
+
+input{
+    margin-bottom: 8px;
+    padding: 8px;
+}
+
+nav{
+    z-index: 10;
+}
+
+/* Card */
+.card{
+    width: var(--card-width);
+    height: auto;
+    margin: var(--card-margin);
+    box-shadow: var(--box-shadow);
+}
+
+.card-content{
+    padding: 12px;
+}
+
+.img-container{
+    position: relative;
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.img-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.save-btn{
+    position: absolute;
+    background: var(--secondary);
+    width: 36px;
+    height: 36px;
+    border-radius: 100px;
+    padding: 4px;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+
+.save-btn:hover{
+    transform: scale(1.1);
+}
+
+.book-info{
+    text-align: center;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+/* Lists */
+ul.stars{
+    margin: 8px 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+ul.stars > li{
+    margin: 2px;
+    cursor: pointer;
+}
+.star{
+    color: var(--secondary);
+    padding: 2px;
+}
+
+.star:hover {
+    border-radius: 30px;
+    transform: scale(1.4);
+    box-shadow: var(--box-shadow);
+}
+
+/* Text */
+h1, h2, h3, h4, h5, h6, p, span, li{
+    font-family: var(--font-family);
+}
+h1, h2, h3, h4, h5, h6, p{
+    color: var(--dark);
+}
+h1#heading{
+    margin: 0 var(--card-margin);
+}
+div.heading{
+    max-width: var(--max-width);
+    margin: auto;
+}
+h2{
+    font-size: 1em;
+}
+h2.title{
+    min-height: 36px;
+}
+h3{
+    font-size: 0.9em;
+}
+h3.author{
+    min-height: 32px;
+}
+p.info{
+    font-size: 0.9em;
+}

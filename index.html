@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ducks</title>
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+
+    <header class="header-flex flex-justify-space-between flex-align-center">
+            <div id="header-logo">
+                <img src="img/logo.png" alt="Logga">
+            </div>
+            <div class="header-icons header-flex-reverse flex-align-center">
+                <div id="bookmark" class="display-none">
+                    <p><span id="bookmark-text"></span> <span id="bookmark-icon" class="fa-regular fa-bookmark fa-lg"></span></p>
+                </div>
+                <div id="profile">
+                    <p><span id="username"></span> <span id="user-icon" class="fa-regular fa-user fa-lg"></span></p>
+                </div>
+            </div>
+    </header>
+    <nav id="login-menu" class="display-none">
+        <button id="login-alt" class="account-btn btn">Logga in</button>
+        <button id="register-alt" class="account-btn btn">Skapa konto</button>
+
+        <div id="login-div" class="display-none">
+            <form id="login-form" class="flex-column">
+                <input type="email" id="login-email" name="email" placeholder="Epost" required>
+                <input type="password" id="login-password" name="password" placeholder="Lösenord" required>
+                <button type="submit" id="login-user" class="form-btn btn">Logga in</button>
+            </form>
+        </div>
+
+        <div id="register-div" class="display-none">
+            <form id="register-form" class="flex-column">
+                <input type="text" id="reg-username" name="username" placeholder="Användarnamn" required>
+                <input type="email" id="reg-email" name="email" placeholder="Epost" required>
+                <input type="password" id="reg-password" name="password" placeholder="Lösenord" required>
+                <button type="submit" id="register-user" class="form-btn btn">Registrera</button>
+            </form>
+        </div>
+    </nav>
+
+    <nav id="profile-menu" class="display-none">
+        <button id="logout" class="btn">Logga ut</button>
+    </nav>
+
+    <div id="page-content">
+        <div class="heading">
+            <h1 id="heading">Alla böcker</h1>
+        </div>
+        <div id="content" class="flex flex-wrap">
+        <!-- Testcard -->
+            <!-- <div class="card">
+                <div class="card-content">
+                    <div class="img-container flex-row flex-justify-center">
+                        <img src="img/ratio-4-5.png" alt="placeholder">
+                        <div class="save-book">
+                            <div class="save-btn flex-row flex-justify-center flex-align-center">
+                                <span class="fa-regular fa-bookmark fa-lg"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="book-info">
+                        <h2 class="title">Placeholder titel</h2>
+                        <ul class="stars flex-row flex-justify-center">
+                            <li><span class="fa-regular fa-star"></span></li>
+                            <li><span class="fa-regular fa-star"></span></li>
+                            <li><span class="fa-regular fa-star"></span></li>
+                            <li><span class="fa-regular fa-star"></span></li>
+                            <li><span class="fa-regular fa-star"></span></li>
+                        </ul>
+                        <h3 class="author">Författare: <span>name</span></h3>
+                        <p class="info">Sidor: <span>number</span></p>
+                        <p class="info">Publicerad: <span>date</span></p>
+                    </div>
+                </div>
+            </div> -->
+        <!-- Testcard -->
+        </div>
+    </div>
+
+    
+</body>
+</html>
